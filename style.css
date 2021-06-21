@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap');
+
+body {
+	background-color: hsl(185, 75%, 39%);
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 18px;
+
+	background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+	background-position: left -24em top -24em, right -24em bottom -24em;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.body-wrap {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(4, 0.1fr);
+
+	min-width: 90%;
+	min-height: 90%;
+
+	margin: auto;
+}
+
+.card {
+	grid-column: 4 / 6;	
+	grid-row: 2 / 3;
+
+	display: flex;
+	flex-direction: column;
+	/* overflow: visible;
+	max-width: 25%;
+	margin: auto; */
+	background: #fff;
+	border-radius: 1em;
+}
+
+.card-pic {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.card-pic-bg {
+	grid-column: 1 / 5;
+	grid-row: 1 / 3;
+
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+
+.card-pic-bg > img {
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+}
+
+.card-pic-profile {
+	grid-column: 2 / 4;
+	grid-row: 2 / 4;
+
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background: transparent;
+}
+
+.card-pic-profile > img{
+	border-radius: 50%;
+	border: #fff solid 0.3em;
+}
+
+.card-text > div {	
+	text-align: center;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-info > div {
+	padding: 0.5em;
+}
+
+.card-info-full-name {
+	margin: 1em;
+	font-weight: 700;
+}
+
+.card-info-age {
+	font-weight: 400;
+}
+
+.card-social-info-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 1em;
+}
+
+.card-social-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.attribution {
+	grid-column: 1 / 9;
+	grid-row: 6 / 7;
+	text-align: center;
+	padding: 2em;
+}
+
+
+
+
+@media (max-width: 1024px) {
+	body {
+		background-position: left -45em top -25em, right -45em bottom -25em;
+	}
+
+	.card {
+		grid-column: 2 / 8;
+	}
+}
